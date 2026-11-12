@@ -52,6 +52,12 @@ def app {F G : C ⥤ D} (α : F ≅ G) (X : C) :
     F.obj X ≅ G.obj X where
   hom := α.hom.app X
   inv := α.inv.app X
+  hom_inv_id :=
+    (NatTrans.comp_app _ _ _).symm.trans <| (congr_fun (congr_arg _ α.hom_inv_id) _).trans <|
+    NatTrans.id_app _ _
+  inv_hom_id :=
+    (NatTrans.comp_app _ _ _).symm.trans <| (congr_fun (congr_arg _ α.inv_hom_id) _).trans <|
+    NatTrans.id_app _ _
 
 attribute [to_dual existing app_inv] app_hom
 

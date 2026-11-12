@@ -36,8 +36,6 @@ category, category theory, isomorphism
 
 @[expose] public section
 
-set_option mathlib.tactic.category.grind true
-
 universe v u
 
 -- morphism levels before object levels. See note [category theory universes].
