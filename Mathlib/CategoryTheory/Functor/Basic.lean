@@ -23,8 +23,6 @@ TODO: Switch to using the `⇒` arrow.
 
 @[expose] public section
 
-set_option mathlib.tactic.category.grind true
-
 namespace CategoryTheory
 
 -- declare the `v`'s first; see note [category theory universes].
@@ -66,7 +64,7 @@ attribute [to_dual self (reorder := mk (map (X Y), map_comp (X Z, f g)))] Functo
 lemma Functor.map_comp_assoc {C : Type u₁} [Category* C] {D : Type u₂} [Category* D] (F : C ⥤ D)
     {X Y Z : C} (f : X ⟶ Y) (g : Y ⟶ Z) {W : D} (h : F.obj Z ⟶ W) :
     (F.map (f ≫ g)) ≫ h = F.map f ≫ F.map g ≫ h := by
-  grind
+  cat_disch
 
 namespace Functor
 

@@ -34,8 +34,6 @@ Introduces notations
 
 @[expose] public section
 
-set_option mathlib.tactic.category.grind true
-
 namespace CategoryTheory
 
 -- declare the `v`'s first; see note [category theory universes].
